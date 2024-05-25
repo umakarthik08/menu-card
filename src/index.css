@@ -1,13 +1,177 @@
+/* src/App.css */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: hsl(45, 70%, 95%);
+  color: hsl(209, 61%, 16%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: hsl(209, 34%, 30%);
+}
+
+h4 {
+  font-size: 1.125rem;
+  color: hsl(209, 34%, 35%);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: hsl(210, 22%, 49%);
+}
+
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 85vw;
+  }
+}
+
+.menu {
+  padding: 3rem 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: hsl(209, 34%, 20%);
+}
+
+.underline {
+  width: 7rem;
+  height: 0.25rem;
+  background: hsl(360, 71%, 66%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.btn-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: hsl(360, 71%, 66%);
+  border: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-radius: 0.25rem;
+}
+
+.filter-btn:hover {
+  background: hsl(360, 71%, 50%);
+}
+
+.active {
+  border-bottom: 2px solid hsl(360, 71%, 66%);
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  gap: 2rem 1.5rem;
+  justify-items: center;
+}
+
+.menu-item {
+  display: grid;
+  gap: 1rem 1.5rem;
+  max-width: 25rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.photo {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted hsl(210, 22%, 49%);
+  margin-bottom: 1rem;
+}
+
+.item-info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: hsl(360, 71%, 66%);
+  font-weight: bold;
+}
+
+.item-text {
+  margin-bottom: 0;
+  color: hsl(210, 22%, 49%);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+
+  .photo {
+    height: 175px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 85vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo {
+    height: 150px;
+  }
+}
+
+/* New styles for the logo */
+.logo-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  border-radius: 0.25rem;
 }
